@@ -23,10 +23,9 @@ steps:
   displayName: 'npm install angular'
 
 - script: |
-    npm run compile
-
-- script: |
-    tsc --target ES6 --strict true --project tsconfigs/production.json
+    npm install -g @angular/cli
+    npm install
+    ng build --prod
 
 - script: |
     npm install
